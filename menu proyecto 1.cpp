@@ -1,6 +1,6 @@
 /*
 * Lenguaje de programacion 2
-* Bachileres: Azuaje Kelvin CI: 25799617 / Rosales Zahiri CI: 25450708
+* Bachileres: Azuaje Kelvin / Rosales Zahiri
 * Sistemas S51
 */
 
