@@ -7,6 +7,7 @@
 #include <iomanip>
 #include <conio.h>
 #include "config.h"
+#include "tamaño.h"  //se hace el llaado de el archivo tamaño.h
 
 using namespace std;
 
