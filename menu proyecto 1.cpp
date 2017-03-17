@@ -6,21 +6,27 @@
 
 #include <iomanip>
 #include <conio.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <cstdlib>
+#include <cstdio>
+#include <string.h>
 #include "config.h"
-#include "tamaño.h"  //se hace el llaado de el archivo tamaño.h
+#include "tamaño.h"  //se hace el llamado de el archivo tamaño.h
 
 using namespace std;
-
 /*
 * Acontinuacion se declaran la variables
 *para que funcione el menu de opciones
 *esto aun sin ser orientado a objetos
 */
 
-int opc, tipo, n, cont = 0; //se declaro la variable n para el menu de agregado, y un contador para la validacion
+int opc, tipo, n, cont = 0, X; //se declaro la variable n para el menu de agregado, y un contador para la validacion
 bool continuar; //esta variable boolean sera la condicion de validacion
 float Peso, Prod_leche;
-string Nombre, Raza;
+string Nombre, Raza, auxN, aux, auxR, NombreA, NombreB;
+Vacas vacas[10];
+char nom[15], nomB[15];
 	
 void menu(){
 	
