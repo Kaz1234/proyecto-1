@@ -10,7 +10,7 @@
 #include <stdio.h>
 #include <cstdlib>
 #include <cstdio>
-#include "config.h"
+#include "archivo.h"
 #include "tamaño.h"  //se hace el llamado de el archivo tamaño.h
 
 using namespace std;
@@ -24,13 +24,13 @@ using namespace std;
 	
 void menu(){
 	
-	int opc, tipo, n, cont = 0, X; //se declaro la variable n para el menu de agregado, y un contador para la validacion
+	int opc, tipo, n, cont = 0, X, num[100]; //se declaro la variable n para el menu de agregado, y un contador para la validacion
 	bool continuar;
 	float Peso, Prod_leche;
 	string auxN, aux, auxR, NombreA, NombreB;
 	char Nombre[20], Raza[20];
 	Vacas vacas[10];
-	char nom[15], nomB[15];
+	char nom[15], nomB[15], decision;
 	
 	do{ //Aqui comienza el menu, con un bucle do-while para que se ejecute mientra no se elija la opcion 3
 		do{
@@ -49,13 +49,16 @@ void menu(){
 		if(cin.fail() && cin.rdstate()){
 			cout<<"valor incorrecto"<<endl;
 			continuar = true;
-		}
+			}
 		}while (continuar);
    		system("cls");
 		
-		switch (opc){ //por medio del valor colocado nos dirigimos a cualquier caso
+	switch (opc){ //por medio del valor colocado nos dirigimos a cualquier caso
 		
-			case 1: //en este se ingresan las vacas
+		case 1: //en este se ingresan las vacas
+			do{
+			void ordenar_vacas();{
+			
 			cout<<"Ingrese la cantidad de vacas a registar: ";
 			cin>>n;
 			system("cls");
@@ -71,12 +74,23 @@ void menu(){
    		
 			cout<<"Ingrese la cantidad de leche promedio por dia: ";
 			cin>>Prod_leche;
+			system("cls");
 			
+			cout<<"\n!Datos guardados con exito¡"<<endl<<endl;
+			system("PAUSE");
+			system("cls");
+			
+			cout<<"¿Desea contiuar? (s/n): ";
+				cin>>decision;
+			system("PAUSE");
 			system("cls");
 			}
+			}
+			}while(decision ==n);
+				
 			break;
 		
-			case 2: //aqui se ordenan dependiendo el tipo
+		case 2: //aqui se ordenan dependiendo el tipo
 			cout<<"************ MENU DE ORDENAMIENTO ************"<<endl;
 			cout<<"**"<<setw(44)<<"**"<<endl;
 			cout<<"** Escoja la forma de ordenamiento"<<setw(12)<<"**"<<endl;
@@ -90,28 +104,29 @@ void menu(){
 			cin>>tipo;
 			system("cls");
 	
-			switch (tipo){
-		
+		switch (tipo){
+			
 			case 1:
+				
 				break;
 				
 			case 2:	
 				break;
 				
 			case 3:
+				
 				break;
 				
 			case 4:
 				break;
 				
 			
-				}
-			
+		}	
 				
-			case 3: //aqui salimos del programa
+		case 3: //aqui salimos del programa
 				break;
 				
-			default: //validamos que se agregen los valores correctos al menu
+		default: //validamos que se agregen los valores correctos al menu
 				if(opc<1 || opc>3){
 					cout<<"Valor incorrecto, ingrese un valor correcto!!!"<<endl;
 					system("PAUSE");
@@ -121,6 +136,8 @@ void menu(){
 	
 	}while(opc !=3); //aqui se evalua la condicion para ver que hacer
 }  
+
+
 
 int main(int argc, char** argv) {
 	
